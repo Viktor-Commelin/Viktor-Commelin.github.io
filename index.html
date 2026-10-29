@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktor Commelin | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VIKTOR.COMMELIN</div>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Viktor Commelin</h1>
+            <p class="subtitle">Applications & Video Games Programmer</p>
+            <p class="tagline">Engineering student at <strong>ISART Digital</strong>. Passionate about AI and physics simulation.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Technical Projects</h2>
+        <div class="grid">
+            
+            <div class="card" onclick="openGallery('slay', 5)">
+                <div class="card-img" style="background-image: url('images/slay1.png')"></div>
+                <div class="card-body">
+                    <h3>Slay the Consul</h3>
+                    <p>Play as a revolutionary infiltrating Napoleon's mansion. Developed with C++ and Blueprints. Features stealth mechanics and knockout systems.</p>
+                    <span class="tech-tag">Unreal Engine</span> <span class="tech-tag">C++</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openGallery('systeme', 5)">
+                <div class="card-img" style="background-image: url('images/systeme1.png')"></div>
+                <div class="card-body">
+                    <h3>Solar System Simulation</h3>
+                    <p>Real-time simulation using Newtonian gravity. Features stable orbits and visualization tools for orbital mechanics.</p>
+                    <span class="tech-tag">Unity</span> <span class="tech-tag">Physics</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openGallery('Eclipse', 6)">
+                <div class="card-img" style="background-image: url('images/Eclipse1.png')"></div>
+                <div class="card-body">
+                    <h3>Eclipse</h3>
+                    <p>2.5D puzzle-platformer focused on light and shadow mechanics. Developed by a multidisciplinary team.</p>
+                    <span class="tech-tag">Unity</span> <span class="tech-tag">C#</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openGallery('tower', 6)">
+                <div class="card-img" style="background-image: url('images/tower1.png')"></div>
+                <div class="card-body">
+                    <h3>Tower Platformer</h3>
+                    <p>3D platformer developed on Unreal Engine. Focused on level design and final boss encounter.</p>
+                    <span class="tech-tag">Unreal Engine</span> <span class="tech-tag">Blueprints</span>
+                </div>
+            </div>
+
+            <div class="card in-progress" onclick="openGallery('stalker', 1)">
+                <div class="card-img" style="background-image: url('images/stalker1.png')"></div>
+                <div class="status-badge">In Progress</div>
+                <div class="card-body">
+                    <h3>Stalker (AI Project)</h3>
+                    <p>Development of a complex algorithmic AI. Features player behavior analysis and predictive movements.</p>
+                    <span class="tech-tag">Unity</span> <span class="tech-tag">C#</span>
+                </div>
+            </div> 
+        </div>
+    </section>
+    
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-overlay" onclick="closeGallery()"></div>
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <button class="nav-btn prev" onclick="changeImage(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Project Image">
+            <div id="image-counter">1 / 5</div>
+        </div>
+        <button class="nav-btn next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Core Tech</h4>
+                    <ul>
+                        <li>C / C++ / C#</li>
+                        <li>Unreal Engine</li>
+                        <li>Unity</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Specialties</h4>
+                    <ul>
+                        <li>Graphics Programming</li>
+                        <li>AI Algorithms</li>
+                        <li>Physics Simulation</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Soft Skills</h4>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                        <li>Attention to Detail</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>English (C2)</li>
+                        <li>Slovak (B2)</li>
+                        <li>Italian (B1)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="footer-content">
+            <p>Let's work together</p>
+            <div class="contact-links">
+                <a href="mailto:viktor.commelin@gmail.com">viktor.commelin@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
